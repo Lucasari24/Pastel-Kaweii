@@ -50,11 +50,11 @@ header {
 }
 
 .main-image h1 {
-    height: 50%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5em;
+    font-size: calc(2em + 1vw);
     text-transform: uppercase;
     color: #f2f2f2;
     text-shadow: 2px 2px 4px #000;
@@ -64,7 +64,7 @@ header {
 
 .main-image .button-top{
     width: 100%;
-    height: 50%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -72,15 +72,47 @@ header {
 }
 
 .button-top button {
-    width: 30%;
-    height: 100px;
-    background-color: #F70000	;
-    border: none;
+    width: 400px;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+    );
+    height: 80px;
+    border: 2px solid #F70000;
     border-radius: 25px 0px 25px 0;
-    font-size: 2em;
+    font-size: 1.5em;
     text-transform: uppercase;
     color: aliceblue;
+    transition-property: border;
+    transition-duration: .5s;
+    cursor: pointer;
 }
+
+.button-top button:hover,
+.button-top button:focus {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+    border: 2px solid #ef8f6e;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+    box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+    @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--hover);
+    }
+  }
+
+  .button-top-first {
+    --color: #ef6eae;
+    --hover: #ef8f6e;
+  }
 
 nav {
     width: 100%;
@@ -378,7 +410,59 @@ nav {
     animation: hero 1s ;
     background-size: 350px; 
 }
+
+.productos {
+    width: 100%;
+    height: 100%;
+    padding: 3em 2em;
 }
+
+.productos h2 {
+    color: #FA8072;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 3em;
+    padding: 0 1em 1em;
+}
+
+.popular-productos_container {
+    outline: 2px solid red;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.populares-productos {
+    outline: 2px solid blue;
+    width: 400px;
+    height: 300px;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.populares-productos .popular-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 1em;
+}
+
+.popular-data p {
+    background-color: #ef8f6e;
+    padding: 0 2em;
+}
+
+.populares-productos .popular1 {
+    height: 220px;
+    width: 100%;
+    background-image: url(popular-pro1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 
 .barra-busqueda i {
     color: #f7f7f7;
