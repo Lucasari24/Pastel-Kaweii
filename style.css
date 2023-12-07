@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
 
 * {
     margin: 0;
@@ -9,11 +10,14 @@
 
 body {
     font-family: 'Mukta', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    /* font-family: 'Redressed', cursive; */
 }
 
 header {
     height: 100%;
     background-color: #FA8072;
+    position: relative;
 }
 
 .heading {
@@ -120,6 +124,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .nav-bar {
@@ -130,12 +135,23 @@ nav {
 
 .nav-bar li {
     list-style: none;
+    transition-duration: .3s;
+}
+
+.nav-bar li:hover > a{
+    color: #F5F4EC;
+    text-shadow: 1px 1px 8px #F70000;
+}
+
+.nav-bar li:hover {
+    transform: scale(1.3);
 }
 
 .nav-bar a {
     text-decoration: none;
     color: aliceblue;
     font-size: 1.3em;
+    font-weight: bold;
 }
 
 .barra-busqueda {
@@ -442,6 +458,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 1px 1px 8px  #0f0f0f;
+    font-family: 'Redressed', cursive;
 }
 
 .populares-productos .popular-data {
@@ -469,7 +486,7 @@ nav {
 }
 
 .popular-data button:hover {
-     animation-name: nashe;
+    animation-name: nashe;
     animation-duration: .3s;
     animation-fill-mode: both;
     animation-direction: alternate-reverse;
@@ -479,28 +496,50 @@ nav {
 @keyframes nashe {
     0% {
         border-bottom: 3px solid #ef8f6e; 
-        text-shadow: 1px 10px 30px #ef8f6e;    
+        text-shadow: 1px 10px 30px #ef8f6e; 
+        font-weight: bold;   
     }
 
     50% {
         border-right: 3px solid #ef8f6e; 
-        border-left: 3px solid #ef8f6e;   
+        border-left: 3px solid #ef8f6e;  
+        font-weight: bold; 
     }
     50%{
         border-left: 3px solid #ef8f6e;
         border-right: 3px solid #ef8f6e;   
+        font-weight: bold;
     }
     100% {
         border-top: 3px solid #ef8f6e; 
         border-bottom: 3px solid transparent; 
+        font-weight: bold;
     }
 }
 
 .populares-productos h3 {
-    padding: 0 2em;
+    padding: .3em 2em;
     font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 1px;
     color: #FF8593;
     text-shadow: 1px 1px 1px #0f0f0f;
+}
+
+.opciones-populares {
+    display: none;
+}
+
+.opciones-populares i {
+    color: #f3f3f3;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition-duration: .1s;
+}
+
+.opciones-populares i:hover {
+    transform: scale(1.3);
+    text-shadow: 1px 1px 16px #f4f4f4;
 }
 
 .populares-productos .popular1 {
@@ -510,6 +549,34 @@ nav {
     background-position: center;
     background-size: cover;
 }
+
+.populares-productos .popular1:hover > .opciones-populares , .popular2:hover .opciones-populares , .popular3:hover > .opciones-populares,
+.popular4:hover > .opciones-populares , .popular5:hover .opciones-populares , .popular6:hover > .opciones-populares {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 2em ;
+    backdrop-filter: brightness(50%);
+    animation-name: fondopopular;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fondopopular {
+    0% {
+        width: 0%;
+        font-size: 0em;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
 .populares-productos .popular2 {
     height: 220px;
     width: 100%;
@@ -555,3 +622,4 @@ nav {
     color: #f7f7f7;
     padding-left: .5em;
 }
+
