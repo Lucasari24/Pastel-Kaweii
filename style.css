@@ -425,40 +425,127 @@ nav {
 }
 
 .popular-productos_container {
-    outline: 2px solid red;
     display: flex;
     align-items: center;
     width: 100%;
-    gap: 1em;
+    column-gap: 1em;
+    row-gap: 3em;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .populares-productos {
-    outline: 2px solid blue;
     width: 400px;
     height: 300px;
-    background-color: #F2F2F2;
+    background-color: #F5F4EC;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 1px 1px 8px  #0f0f0f;
 }
 
 .populares-productos .popular-data {
     display: flex;
     justify-content: space-between;
-    padding: 10px 1em;
+    padding: 10px 2em;
 }
 
 .popular-data p {
     background-color: #ef8f6e;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #f3f3f3;
     padding: 0 2em;
+    border-radius: 15px;
+}
+
+.popular-data button {
+    border: 3px solid transparent;
+    padding: 10px 20px;
+    color: #ef8f6e;
+    cursor: pointer;
+
+}
+
+.popular-data button:hover {
+     animation-name: nashe;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes nashe {
+    0% {
+        border-bottom: 3px solid #ef8f6e; 
+        text-shadow: 1px 10px 30px #ef8f6e;    
+    }
+
+    50% {
+        border-right: 3px solid #ef8f6e; 
+        border-left: 3px solid #ef8f6e;   
+    }
+    50%{
+        border-left: 3px solid #ef8f6e;
+        border-right: 3px solid #ef8f6e;   
+    }
+    100% {
+        border-top: 3px solid #ef8f6e; 
+        border-bottom: 3px solid transparent; 
+    }
+}
+
+.populares-productos h3 {
+    padding: 0 2em;
+    font-weight: bold;
+    color: #FF8593;
+    text-shadow: 1px 1px 1px #0f0f0f;
 }
 
 .populares-productos .popular1 {
     height: 220px;
     width: 100%;
     background-image: url(popular-pro1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.populares-productos .popular2 {
+    height: 220px;
+    width: 100%;
+    background-image: url(popular-pro2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.populares-productos .popular3 {
+    height: 220px;
+    width: 100%;
+    background-image: url(popular-pro3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.populares-productos .popular4 {
+    height: 220px;
+    width: 100%;
+    background-image: url(popular-pro4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.populares-productos .popular5 {
+    height: 220px;
+    width: 100%;
+    background-image: url(popular-pro5.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.populares-productos .popular6 {
+    height: 220px;
+    width: 100%;
+    background-image: url(popular-pro6.jpg);
     background-position: center;
     background-size: cover;
 }
